@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pesan</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('D:/Mozart/Isengnah/ngide/bg1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+        }
+        
+        .notebook {
+            background-color: #fff;
+            border: 10px solid #4a4a4a;
+            border-radius: 10px;
+            padding: 20px;
+            position: relative;
+            box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+            width: 80%;
+            max-width: 600px;
+            margin: 2rem auto;
+        }
+        
+        .holes {
+            position: absolute;
+            top: 10px;
+            left: 10px;
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+            justify-content: space-between;
+            gap: 4px;
+            padding: 5px 0;
+        }
+        
+        .hole {
+            width: 12px;
+            height: 12px;
+            background-color: #4a4a4a;
+            border-radius: 50%;
+        }
+        
+        .line {
+            border-bottom: 1px solid #c0e4e8;
+            height: 30px;
+            font-size: 16px;
+            padding-left: 20px;
+        }
+    </style>
+</head>
+
+<body class="flex items-center justify-center h-screen">
+    <div class="notebook">
+        <div class="holes">
+            <div class="hole"></div>
+            <div class="hole"></div>
+            <div class="hole"></div>
+            <div class="hole"></div>
+            <div class="hole"></div>
+        </div>
+        <div class="line">UCAPAN SURAT</div>
+        <div class="line">Your pre-defined message here</div>
+        <div class="text-center mt-4">
+            <button class="px-4 py-2 bg-green-500 text-white rounded-lg" onclick="window.open('https://wa.me/?text=' + encodeURIComponent('Your WhatsApp Message Here'))">
+        Balas Pesan
+      </button>
+        </div>
+    </div>
+
+    <audio id="backgroundMusic" loop>
+        <source src="https://www.youtube.com/watch?v=98zHKN-xSHk" type="audio/mpeg">
+        Your browser does not support the audio element.
+      </audio>
+
+    <script>
+        const backgroundMusic = document.getElementById('backgroundMusic');
+
+        // Tampilkan prompt untuk memulai musik
+        window.addEventListener('load', () => {
+            if (confirm("Mulai musik latar?")) {
+                backgroundMusic.play().catch(error => {
+                    console.error("Error memutar musik: ", error);
+                });
+            }
+        });
+    </script>
+</body>
+
+</html>

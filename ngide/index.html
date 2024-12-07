@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta content="IE=edge" http-equiv="X-UA-Compatible" />
+    <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+    <title>Pesan Dariku Untukmu</title>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&amp;display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            background-image: url('D:/Mozart/Isengnah/ngide/bg1.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-position: center;
+            height: 100vh;
+            margin: 0;
+        }
+    </style>
+</head>
+
+<body class="h-screen flex items-center justify-center">
+    <div class="text-center bg-white bg-opacity-90 p-4 rounded-lg shadow-lg">
+        <h3 class="text-2xl font-bold mb-2 text-gray-700">Ada pesan buat kamu</h3>
+        <img src="https://storage.googleapis.com/a1aa/image/E9guuT9X9B7sJ9l5l63djvksJOcQZcfkQHdMRcw1eY37Kn4TA.jpg" class="cursor-pointer mb-4" height="150" width="150" onclick="openMessagePage()" />
+        <p class="text-gray-600">Tekan ikon untuk membuka pesan</p>
+    </div>
+
+    <script>
+        function openMessagePage() {
+            window.location.href = "message.html";
+        }
+    </script>
+</body>
+
+</html>
